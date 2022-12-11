@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400;600&family=Oswald:wght@200;300;400;500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --archivo: "Archivo Black", sans-serif;
+  --caveat: "Caveat", cursive;
+  --oswald: "Oswald", sans-serif;
+  --buttoncolor: cyan;
+}
+
+.background h5 {
+  font-family: var(--caveat);
+  font-size: x-large;
+  color: rgb(161 161 170);
+  opacity: 25%;
+}
+
+button.fill {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button.fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -1em -1em;
+  width: 0;
+  height: 300%;
+  z-index: -1;
+  transform: rotate(10deg);
+  background-color: var(--buttoncolor);
+  transition: all 1.5s;
+}
+button.fill:hover::before {
+  width: 200%;
+}
