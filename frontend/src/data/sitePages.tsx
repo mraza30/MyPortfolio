@@ -10,16 +10,16 @@ import {
 interface IPage {
   name: string;
   ficon: IconDefinition;
-  route?: string;
+  route: string;
   id: number;
 }
 
 const sitePages: IPage[] = [
-  { name: "About", ficon: faAddressCard, id: 1 },
-  { name: "Skills", ficon: faSkull, id: 2 },
-  { name: "My Work", ficon: faCodeMerge, id: 3 },
-  { name: "Blog", ficon: faBlog, id: 4 },
-  { name: "Contact", ficon: faContactBook, id: 5 },
+  { name: "About", ficon: faAddressCard, route: "/about", id: 1 },
+  { name: "Skills", ficon: faSkull, route: "/skills", id: 2 },
+  { name: "My Work", ficon: faCodeMerge, route: "/work", id: 3 },
+  { name: "Blog", ficon: faBlog, route: "/blog", id: 4 },
+  { name: "Contact", ficon: faContactBook, route: "/contactme", id: 5 },
 ];
 
 export { sitePages };

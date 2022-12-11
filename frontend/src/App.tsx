@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
-import { Homepage } from "./pages";
+import { Contactpage, Homepage } from "./pages";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Homepage />} />
+        <Route path="/contactme" element={<Contactpage />} />
       </Routes>
     </div>
   );

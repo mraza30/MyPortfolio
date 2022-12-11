@@ -46,7 +46,7 @@ function Navbar() {
       {nav.canNavCollapse ? (
         <FontAwesomeIcon
           icon={nav.isNavOpen ? faClose : faBars}
-          className="absolute top-3 right-3 text-zinc-400 hover:text-cyan-300"
+          className="absolute top-3 right-3 text-zinc-400 hover:text-teal-300"
           size="2xl"
           onClick={toggleNavbar}
         />
@@ -61,7 +61,7 @@ function Navigation() {
       animate={{ translateX: 0 }}
       exit={{ translateX: "-100%" }}
       transition={{ duration: 0.5 }}
-      className="absolute top-0 left-0 z-50 flex h-screen w-32 flex-col overflow-y-auto bg-zinc-800"
+      className="absolute top-0 left-0 z-50 flex h-screen w-32 select-none flex-col overflow-y-auto bg-zinc-800"
     >
       <Link to="">
         <div className="flex h-32 items-center justify-center gap-1 bg-black">
@@ -81,8 +81,8 @@ function Navigation() {
       <div className="mx-auto my-10 flex flex-col gap-10 ">
         {sitePages.map((page) => (
           <Link
-            to=""
-            className="font-Oswald text-xl font-light text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:text-cyan-300"
+            to={page.route}
+            className="font-Oswald text-xl font-light text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:text-teal-300"
             key={page.id}
           >
             <FontAwesomeIcon icon={page.ficon} /> {page.name}
@@ -95,7 +95,7 @@ function Navigation() {
             <FontAwesomeIcon
               icon={link.ficon}
               size="2xl"
-              className="text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:text-cyan-300"
+              className="text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:text-teal-300"
             />
           </a>
         ))}

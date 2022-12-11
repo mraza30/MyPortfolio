@@ -3,18 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --archivo: "Archivo Black", sans-serif;
   --caveat: "Caveat", cursive;
   --oswald: "Oswald", sans-serif;
-  --buttoncolor: cyan;
+  --buttoncolor: #08fdd8;
 }
 
 .background h5 {
   font-family: var(--caveat);
-  font-size: x-large;
+  font-size: large;
   color: rgb(161 161 170);
-  opacity: 25%;
+  opacity: 35%;
 }
 
 button.fill {
@@ -28,7 +32,7 @@ button.fill::before {
   position: absolute;
   top: 0;
   left: 0;
-  margin: -1em -1em;
+  margin: -2em -2em;
   width: 0;
   height: 300%;
   z-index: -1;
