@@ -61,7 +61,7 @@ function Navigation() {
       animate={{ translateX: 0 }}
       exit={{ translateX: "-100%" }}
       transition={{ duration: 0.5 }}
-      className="absolute top-0 left-0 z-50 flex h-screen w-32 select-none flex-col overflow-y-auto bg-zinc-800"
+      className="fixed top-0 left-0 z-50 flex h-screen w-32 select-none flex-col overflow-y-auto bg-zinc-800"
     >
       <Link to="">
         <div className="flex h-32 items-center justify-center gap-1 bg-black">

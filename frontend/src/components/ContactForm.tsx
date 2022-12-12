@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function ContactForm() {
   const commonClass =
-    " md:h-12 bg-zinc-600 h-10 outline-none px-2 text-zinc-200 tracking-wide placeholder:text-zinc-300 ";
+    " md:h-12 bg-zinc-800 h-10 outline-none px-2 text-zinc-200 tracking-wider placeholder:text-zinc-300 ";
   const classUpper = " w-1/2 ";
   return (
     <Formik
@@ -57,24 +57,26 @@ export function ContactForm() {
             initial={{ y: 60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className="h-32 resize-none bg-zinc-600 px-2 tracking-wide text-zinc-200 outline-none placeholder:text-zinc-300"
+            className="h-32 resize-none bg-zinc-800 px-2 tracking-wider  text-zinc-200 outline-none placeholder:text-zinc-300"
             id="message"
             {...formik.getFieldProps("message")}
             required
           />
 
-          <div className="flex h-10 justify-end md:h-12">
-            <motion.button
+          <motion.div
+            initial={{ y: 70, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="flex h-10 justify-end md:h-12"
+          >
+            <button
               placeholder="Message"
-              initial={{ y: 70, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 1 }}
               type="submit"
-              className="fill w-1/2 border border-teal-300 py-1 tracking-widest text-teal-300 hover:text-black"
+              className="fill w-1/2 border border-teal-300 tracking-widest text-teal-300 hover:text-black"
             >
               Submit
-            </motion.button>
-          </div>
+            </button>
+          </motion.div>
         </Form>
       )}
     </Formik>

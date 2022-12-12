@@ -6,8 +6,8 @@ import { RubberBand } from "../components/Animated";
 function Homepage() {
   const navigate = useNavigate();
   return (
-    <div className="flex h-screen justify-center overflow-hidden md:ml-40 md:justify-between">
-      <div className="background flex select-none flex-col justify-center">
+    <div className="flex justify-center overflow-hidden md:ml-40 md:justify-between">
+      <div className="background flex min-h-screen select-none flex-col justify-center lg:h-screen">
         <div>
           <h5>{`<html>`}</h5>
           <h5>{`<body>`}</h5>
@@ -25,7 +25,7 @@ function Homepage() {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1.5, duration: 0.5 }}
-            className="ml-5 inline-block font-Oswald text-lg font-light tracking-widest text-zinc-300 md:text-2xl"
+            className="ml-5 inline-block font-Oswald text-lg font-light tracking-widest text-zinc-300 md:text-xl"
           >
             Full Stack Developer
           </motion.span>
@@ -35,7 +35,7 @@ function Homepage() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.6, duration: 0.5 }}
-            className="fill mt-5 ml-5 border border-teal-300 px-10 py-2 font-Oswald text-lg font-extralight tracking-widest text-teal-300 hover:text-black md:text-2xl"
+            className="fill mt-5 ml-5 border border-teal-300 px-12 py-2 font-Oswald text-lg font-extralight tracking-widest text-teal-300 hover:text-black md:text-xl"
             onClick={() => navigate("/contactme")}
           >
             Contact me!
