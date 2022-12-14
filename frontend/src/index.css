@@ -13,7 +13,6 @@
   --oswald: "Oswald", sans-serif;
   --buttoncolor: #08fdd8;
 }
-
 .background h5 {
   font-family: var(--caveat);
   font-size: large;
@@ -42,4 +41,15 @@ button.fill::before {
 }
 button.fill:hover::before {
   width: 200%;
+}
+
+form#contactme input:focus,
+form#contactme textarea:focus {
+  transition: all 1s;
+  border-bottom: 1px solid #08fdd8;
+}
+
+form#contactme input:not(:placeholder-shown):invalid,
+form#contactme textarea:focus:invalid {
+  border-bottom: 1px solid red;
 }

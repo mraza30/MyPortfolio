@@ -5,8 +5,8 @@ import { RubberBand } from "../components/Animated";
 
 export function Contactpage() {
   return (
-    <div className="grid overflow-hidden md:ml-40 lg:grid-cols-2 lg:gap-5">
-      <div className="background m-auto flex min-h-screen w-11/12 select-none flex-col justify-center lg:h-screen lg:w-full">
+    <div className="grid min-h-screen md:ml-40 lg:grid-cols-2">
+      <div className="background mx-auto flex min-h-screen w-11/12 flex-col justify-center md:mx-0 ">
         <div>
           <h5>{`<html>`}</h5>
           <h5>{`<body>`}</h5>
@@ -20,7 +20,7 @@ export function Contactpage() {
           <h5 className="inline">{`</h1>`}</h5>
 
           <h5>{`<p>`}</h5>
-          <p className="ml-5 text-justify font-Oswald text-sm font-light text-white md:text-xl">
+          <p className="ml-5 text-justify font-Oswald font-light tracking-wider text-white md:text-xl">
             I’m interested in freelance opportunities – especially ambitious or
             large projects. However, if you have other request or question,
             don’t hesitate to use the form.

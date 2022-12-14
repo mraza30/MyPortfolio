@@ -46,7 +46,7 @@ function Navbar() {
       {nav.canNavCollapse ? (
         <FontAwesomeIcon
           icon={nav.isNavOpen ? faClose : faBars}
-          className="absolute top-3 right-3 text-zinc-400 hover:text-teal-300"
+          className="absolute top-3 right-3 z-50 text-zinc-400 hover:text-teal-300"
           size="2xl"
           onClick={toggleNavbar}
         />

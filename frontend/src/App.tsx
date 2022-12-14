@@ -10,6 +10,14 @@ function App() {
       <Routes>
         <Route index element={<Homepage />} />
         <Route path="/contactme" element={<Contactpage />} />
+        <Route
+          path="*"
+          element={
+            <div className="m-auto text-center text-white">
+              work in progress
+            </div>
+          }
+        />
       </Routes>
     </div>
   );

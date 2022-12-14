@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function ContactForm() {
   const commonClass =
-    " md:h-12 bg-zinc-800 h-10 outline-none px-2 text-zinc-200 tracking-wider placeholder:text-zinc-300 ";
+    " md:h-12 bg-zinc-800 z-10 h-10 outline-none px-2 text-zinc-200 tracking-wider placeholder:text-zinc-300 relative ";
   const classUpper = " w-1/2 ";
   return (
     <Formik
@@ -17,7 +17,10 @@ export function ContactForm() {
       }}
     >
       {(formik) => (
-        <Form className="flex flex-col gap-3 font-Oswald font-light">
+        <Form
+          className="flex flex-col gap-3 font-Oswald font-light"
+          id="contactme"
+        >
           <motion.div
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -37,6 +40,7 @@ export function ContactForm() {
               name="email"
               type="email"
               placeholder="Email"
+              pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
               required
             />
           </motion.div>
